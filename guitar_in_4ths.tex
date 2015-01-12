@@ -1,0 +1,65 @@
+\documentclass[12pt,pdftex]{report}
+
+\newcommand{\authorname}{Benjamin H. Shelton}
+\newcommand{\fulltitle}{Guitar in Fourths: Symmetry and Jazz Harmony}
+
+\usepackage{gchords}
+\usepackage{geometry}
+\usepackage{rotating}
+
+
+\usepackage{acronym}
+\usepackage{amsmath}
+\usepackage{appendix}
+\usepackage{graphicx}
+\usepackage[obeyspaces,spaces]{url}
+\usepackage{hyperref}
+\usepackage{listings} %code listings
+\usepackage{placeins} %used to keep figures from going past the end of the section
+\usepackage{multirow} %Fancy multi-column and -row tables
+\usepackage{epigraph}
+
+\hypersetup{
+% Set PDF authorship information
+    pdfauthor={\authorname},%
+    pdftitle={\fulltitle},%
+    pagebackref=true,%
+% Make hyperref links black
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.1in}
+
+\begin{document}
+
+\newcommand{\achapter}[2]{
+	\chapter{#1}
+	\label{#2}
+	\markright{\authorname \hfill Chapter \thechapter. #1 \hfill}
+}
+
+\pagebreak
+
+\chapter*{Acknowledgments}
+
+I'd like to acknowledge the following influences on this work:
+
+Ted Greene, for setting such a superb example of how to play the guitar and how to treat other people.
+
+Clare Fischer, whose voicings I have stolen over and over and over again.
+
+\tableofcontents
+\pagebreak
+
+\input{introduction.tex}
+\input{basic_grips.tex}
+\input{inversions.tex}
+\input{quartal_voicings.tex}
+\input{movements.tex}
+
+\end{document}
